@@ -1,1 +1,309 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --secondary-color: #24292e;
+            --accent-color: #2ea44f;
+            --text-color: #24292e;
+            --light-bg: #f6f8fa;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #586069;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: var(--light-bg);
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-card p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #0256b9;
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e1e4e8;
+        }
+        
+        .sidebar {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 6px;
+            height: fit-content;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tag {
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #586069;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Victor Karani</h1>
+        <p class="subtitle">AI & Electronics Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <section id="projects">
+                <h2>Projects</h2>
+                
+                <div class="project-card">
+                    <h3>Spoiler Shield</h3>
+                    <p>A project that uses BERT transformers to separate movie watcher reviews with spoipers from those that don't have spoilers</p>
+                    <p>Technologies and techniques: EDA, Transformers, Hyperparameter tuning</p>
+                    <a href="#" class="btn">Project Overview</a>
+                    <a href="#" class="btn btn-secondary">Project files</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Classical ML</h3>
+                    <p>Using Logistic regression, Decision Tree and Random Forest to find out Credit worthiness of potential lenders from application data.</p>
+                    <p>Technologies and techniques: Decision Tree, Logistic regression, Random Forest, EDA</p>
+                    <a href="#" class="btn">Project Overview</a>
+                    <a href="#" class="btn btn-secondary">Project Files</a>
+                </div>
+                
+            </section>
+            
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hello! I'm a passionate software developer with a focus on web technologies and open source projects. I enjoy building user-friendly applications that solve real-world problems.</p>
+                <p>With 5 years of experience in the industry, I've worked on a variety of projects ranging from simple static websites to complex web applications. I'm constantly learning and exploring new technologies to improve my skills.</p>
+                <p>When I'm not coding, you can find me hiking in the mountains, reading tech blogs, or contributing to open source projects.</p>
+            </section>
+            
+            <section id="contact">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaborations or just a friendly chat:</p>
+                <p>Email: <a href="mailto:victor.karani@gmail.com">victor.karani@gmail.com</a></p>
+                <!-- <p>Connect with me on social media using the links in the sidebar!</p> -->
+            </section>
+        </div>
+        <!---
+        <div class="sidebar">
+            <div class="profile">
+                <img src="/api/placeholder/400/400" alt="Profile" class="profile-img">
+                <h3>Jane Doe</h3>
+                <p>Seattle, WA</p>
+                
+                <div class="social-links">
+                    <a href="#" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.25C5.37 0.25 0 5.62 0 12.25C0 17.63 3.44 22.19 8.21 23.75C8.81 23.86 9.03 23.48 9.03 23.15C9.03 22.85 9.02 22.06 9.02 21.06C5.68 21.76 4.97 19.64 4.97 19.64C4.42 18.27 3.63 17.9 3.63 17.9C2.54 17.16 3.71 17.17 3.71 17.17C4.92 17.26 5.55 18.42 5.55 18.42C6.63 20.22 8.36 19.7 9.05 19.38C9.16 18.6 9.47 18.08 9.81 17.77C7.15 17.46 4.34 16.42 4.34 11.82C4.34 10.5 4.81 9.42 5.57 8.57C5.45 8.26 5.03 7.04 5.68 5.36C5.68 5.36 6.69 5.03 9.01 6.54C9.98 6.27 11.01 6.13 12.04 6.13C13.06 6.13 14.1 6.27 15.06 6.54C17.39 5.03 18.4 5.36 18.4 5.36C19.05 7.04 18.63 8.26 18.51 8.57C19.27 9.42 19.74 10.5 19.74 11.82C19.74 16.43 16.93 17.45 14.26 17.76C14.67 18.14 15.05 18.88 15.05 20.01C15.05 21.62 15.04 22.74 15.04 23.15C15.04 23.49 15.26 23.87 15.87 23.75C20.56 22.19 24 17.63 24 12.25C24 5.62 18.63 0.25 12 0.25Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h-.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" title="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        -->
+        <!---    
+            <section>
+                <h3>Skills</h3>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </section>
+            
+            <section>
+                <h3>Education</h3>
+                <p><strong>BS in Computer Science</strong></p>
+                <p>University of Washington</p>
+                <p>2015 - 2019</p>
+            </section>
+        -->    
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Victor Karani. All rights reserved.</p>
+        <!-- <p>Built with ❤️ and deployed on GitHub Pages</p> -->
+    </footer>
+</body>
+</html>
