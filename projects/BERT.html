@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Karani's GitHub Page</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --secondary-color: #24292e;
+            --accent-color: #2ea44f;
+            --text-color: #24292e;
+            --light-bg: #f6f8fa;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #586069;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: var(--light-bg);
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-card p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #0256b9;
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e1e4e8;
+        }
+        
+        .sidebar {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 6px;
+            height: fit-content;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tag {
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #586069;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Victor Karani</h1>
+        <p class="subtitle">AI & Electronics Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">            
+            <section id="about">
+                <h2>Spoiler Shield with BERT</h2>
+                <p>Using a BERT transformer approach to make user users only see movie reviews with no spoilers </p>
+                <img src="3 tower BERT balanced.png" alt="Random forest"  width="90%" height="90%">
+            </section>
+            
+            <section id="contact">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaborations or just a friendly chat:</p>
+                <p>Email: <a href="mailto:victor.karani@gmail.com">victor.karani@gmail.com</a></p>
+                <!-- <p>Connect with me on social media using the links in the sidebar!</p> -->
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Victor Karani. All rights reserved.</p>
+    </footer>
+</body>
+</html>
