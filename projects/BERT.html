@@ -217,23 +217,31 @@
                 <h2>Spoiler Shield with BERT</h2>
                 <p>Using a BERT transformer approach to make user users only see movie reviews with no spoilers </p>
                 <img src="3 tower BERT balanced.png" alt="Random forest"  width="90%" height="90%">
+                <p> End to End architecture for spoiler removal starting from raw user reviews and using multi head BERT to present clean results to the end users</p>
             </section>
             
             <section id="introduction">
                 <h2>1. Introduction</h2>
-                <p>TODO</p>
+                <p>Online movie fan sites such ad IMDB have many entusiastic users who are ready to participate and give their feedback about movies that they have watched. Real user reviews have an element of authenticity that cannot be matched by an official review from the movie studio or promoter.</p>
             </section>
             <section id="problem">
                 <h2>2. Problem Statement</h2>
-                <p>TODO</p>
-            </section>
-            <section id="importance">
-                <h2>3. Importance</h2>
-                <p>TODO</p>
+                <p>The idea is to present a selection of these user-generated movie reviews to the customer. 
+                    However it is imperative to remove any reviews that may have spoilers in them. 
+                    Exposing the entire plot to a potential user reduces the probability that they would watch the movie.
+                </p>
             </section>
             <section id="solution">
-                <h2>4. Solution</h2>
-                <p>TODO</p>
+                <h2>3. Solution</h2>
+                <p><li>Collect the raw data from the dataset.</li>
+                   <li>Clean it and check for imbalance.</li>
+                   <li>Balance the dataset using the is_spoiler label.</li>
+                   <li>Extract and pass the 3 main pillars of our dataset: reviews, synopsis and summary through their own BERT transformer heads.</li>
+                   <li>Combine the Synopsis and Summary Embeddings</li>
+                   <li>Concat this resulting embedding with the reviews embedding</li>
+                   <li>Pass this through a Fully connected Neural Net</li>
+                   <li>Evaluate the resulting Logits</li>
+                </p>
             </section>
         </div>
 
