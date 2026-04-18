@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Karani's GitHub Page</title>
+    <style>
+        :root {
+            --primary-color: #0366d6;
+            --secondary-color: #24292e;
+            --accent-color: #2ea44f;
+            --text-color: #24292e;
+            --light-bg: #f6f8fa;
+            --border-color: #e1e4e8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #586069;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: var(--light-bg);
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .project-card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-card p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #0256b9;
+        }
+        
+        .btn-secondary {
+            background-color: var(--light-bg);
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e1e4e8;
+        }
+        
+        .sidebar {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 6px;
+            height: fit-content;
+        }
+        
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tag {
+            background-color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #586069;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Victor Karani</h1>
+        <p class="subtitle">MLOPS & AI</p>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">            
+            <section id="about">
+                <h2>End to end MLOPS: MEDIWATCH</h2>
+                <p>Demonstrating end-to-end MLOPS including training, production deployment and model management </p>
+                <img src="MEDIWATCH.png" alt="Mediwatch"  width="95%" height="95%">
+            </section>
+            
+            <section id="introduction">
+                <h2>1. Introduction</h2>
+                <p>What does it take to create a realistic system that demonstrates the entire ML life cycle, all the way from the notebook to production? How will you monitor the model in the field for data and model drift? This project answers those questions.</p>
+            </section>
+            <section id="problem">
+                <h2>2. Problem Statement</h2>
+                <p>Starting with a well known dataset (Medi-watch), This project aims to 
+                    <li> Create a model that can predict 30 day return to ER for patients </li>
+                    <li> Provide a training pipeline to build the model</li>
+                    <li> As part of the build pipeline, deploy the model into kubernetes for production</li>
+                    <li> Create an interactive front end that a health professional can use to estimate the probability of 30 day return for an individual patient</li>
+                    <li> Monitor all experiments (for example training and builds)</li>
+                    <li>  Monitor for data and model drift and provide a DAG to trigger a redeployment if needed </li>
+                </p>
+            </section>
+            <section id="solution">
+                <h2>3. Solution</h2>
+                <p><li>Perform EDA on the data</li>
+                   <li>Create the model and convert the notebook into a proper python class</li>
+                   <li>Create a set of FastAPI endpoints to interact with the model</li>
+                   <li>Create a UI frontend for the end user</li>
+                   <li>Use Ray-Tune for hyperparameter optimization</li>
+                   <li>Generate a Docker image for the entire project</li>
+                   <li>Deploy the docker image to kubernetes (minikube)</li>
+                   <li>Monitor data drift with Evidently</li>
+                   <li>Use airflow DAG to manage DAGS for build processes</li>
+                   <li>Use MLFLOW to monitor all experiments</li>
+                </p>              
+            </section>
+            <section>
+                <a href="https://github.com/vkarani/IMBDSpoilerShield" target="_blank" class="btn btn-secondary">Project files</a>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Victor Karani. All rights reserved.</p>
+    </footer>
+</body>
+</html>
